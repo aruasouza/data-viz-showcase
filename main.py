@@ -1,3 +1,4 @@
+from waitress import serve
 import dash
 from dash import Dash, html, dcc, callback, Output, Input
 import plotly.express as px
@@ -17,4 +18,4 @@ app.layout = html.Div([
 ],style = main_div)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+	serve(app.server,host="0.0.0.0",port=8000)
