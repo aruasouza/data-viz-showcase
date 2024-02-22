@@ -15,7 +15,9 @@ main_div = {
 }
 
 body_div = {
-    'display':'flex'
+    'display':'flex',
+    'flexWrap':'wrap',
+    'justifyContent': 'center'
 }
 
 cabecalho = {
@@ -23,7 +25,7 @@ cabecalho = {
     'border-bottom':'1px solid rgb(80,80,100)',
     'display':'flex',
     'padding':'25px',
-    'paddingLeft':f'{left_space - navmargin}px',
+    'justifyContent':'center'
 }
 
 nav = {
@@ -47,14 +49,13 @@ intro = {
 
 bloco_apresentacao = {
     'maxWidth':'500px',
-    'marginLeft':f'{left_space}px',
-    'marginTop':f'{upspace - 26}px',
+    'padding':f'{upspace - graph_margin + 5}px',
 }
 
 bloco_graficos = {
     'display':'flex',
     'padding':f'{upspace - graph_margin + 5}px',
-    'marginLeft':'50px'
+    'flexWrap':'wrap'
 }
 
 graph_img = {
@@ -103,4 +104,23 @@ selection_bar = {
     'display':'flex',
     'justifyContent':'center',
     'marginTop':'65px'
+}
+
+linkedin = {
+    'height':'17px',
+    'width':'auto'
+}
+
+github = {
+    'height':'22px',
+    'width':'auto'
+}
+
+links = {
+    'margin':f'{navmargin - 5}px',
+    'padding':'5px',
+}
+
+middle_div = {
+    'width':'60%'
 }
