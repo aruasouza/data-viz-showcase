@@ -1,6 +1,5 @@
 import dash
 from dash import html,dcc
-from styles import *
 import pandas as pd
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
@@ -28,5 +27,5 @@ def build_graph():
 
 
 layout = html.Div(
-    dcc.Graph(figure = build_graph(),style = graph)
+    dcc.Graph(figure = build_graph(),className = 'graph')
 )

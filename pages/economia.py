@@ -1,6 +1,5 @@
 import dash
 from dash import html,dcc
-from styles import *
 import pandas as pd
 from bcb import sgs,Expectativas
 from datetime import date,timedelta
@@ -95,5 +94,5 @@ def build_figure():
 dash.register_page(__name__)
 
 layout = html.Div(
-    dcc.Graph(figure=build_figure(),style = graph)
+    dcc.Graph(figure=build_figure(),className = 'graph')
 )

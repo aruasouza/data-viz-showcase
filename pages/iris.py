@@ -1,6 +1,5 @@
 import dash
 from dash import html,dcc,Input, Output, callback
-from styles import *
 import pandas as pd
 import plotly.express as px
 from sklearn.model_selection import train_test_split
@@ -36,22 +35,22 @@ layout = html.Div([
     html.Div([
         html.Div([
                 'Modelo',
-                dcc.Dropdown(list(models.keys()),'Regressão Linear',id='model',style = dropdown_iris)
-            ],style = div_dropdown),
+                dcc.Dropdown(list(models.keys()),'Regressão Linear',id='model',className = 'dropdown_iris')
+            ],className = 'div_dropdown'),
         html.Div([
                 'Variável Alvo',
-                dcc.Dropdown(names,names[2],id='target',style = dropdown_iris)
-            ],style = div_dropdown),
+                dcc.Dropdown(names,names[2],id='target',className = 'dropdown_iris')
+            ],className = 'div_dropdown'),
         html.Div([
                 'Atributo "X"',
-                dcc.Dropdown(names,names[0],id='x1',style = dropdown_iris)
-            ],style = div_dropdown),
+                dcc.Dropdown(names,names[0],id='x1',className = 'dropdown_iris')
+            ],className = 'div_dropdown'),
         html.Div([
                 'Atributo "Y"',
-                dcc.Dropdown(names,names[1],id='x2',style = dropdown_iris)
-            ],style = div_dropdown)
-    ],style = selection_bar),
-    dcc.Graph(id = 'graph',style=graph)
+                dcc.Dropdown(names,names[1],id='x2',className = 'dropdown_iris')
+            ],className = 'div_dropdown')
+    ],className = 'selection_bar'),
+    dcc.Graph(id = 'graph',className='graph')
 ])
 
 @callback(
