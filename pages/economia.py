@@ -86,13 +86,15 @@ def build_figure():
     fig.add_trace(go.Scatter(x = selic_exp.index,y = selic_exp['Mediana'],name = 'Proj. Mediana',marker_color='gold',hovertemplate="%{y}%"),row = 2,col = 2)
     fig.add_trace(go.Scatter(x = selic_exp.index,y = selic_exp['Minimo'],name = 'Proj. Minima',marker_color='gold',hovertemplate="%{y}%"),row = 2,col = 2)
 
-    fig.update_layout(showlegend=False,hovermode='x unified',template="plotly_dark",margin=dict(l=100,r=100,b=70,t=100),
-                      title=dict(text = "Economia Brasil",font = dict(size=20),y=.95,x=.07),
+    fig.update_layout(showlegend=False,hovermode='x unified',template="plotly_dark",margin=dict(l=0,r=0,b=0,t=30),
                       paper_bgcolor="#0E1116",plot_bgcolor='rgba(255,255,255,0.1)')
     return fig
 
 dash.register_page(__name__)
 
 layout = html.Div(
-    dcc.Graph(figure=build_figure(),className = 'graph')
+    [
+        html.H2('Séries Históricas e Projeções da Economia Brasileira',className = 'graph-title'),
+        dcc.Graph(figure = build_figure(),className = 'graph')
+    ]
 )

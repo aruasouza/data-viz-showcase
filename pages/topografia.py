@@ -20,12 +20,14 @@ def build_graph():
     camera = dict(
     eye=dict(x=0., y=-0.1, z=1.5))
     fig = go.Figure(go.Surface(y = wide.index,x = wide.columns,z = wide.values,colorscale = colorscale))
-    fig.update_layout(scene_camera=camera,template="plotly_dark",margin=dict(l=100,r=100,b=70,t=100),
-                      title=dict(text = "Topografia Brasil",font = dict(size=20),y=.95,x=.07),
+    fig.update_layout(scene_camera=camera,template="plotly_dark",margin=dict(l=0,r=0,b=0,t=0),
                       paper_bgcolor="#0E1116",plot_bgcolor='rgba(255,255,255,0.1)')
     return fig
 
 
 layout = html.Div(
-    dcc.Graph(figure = build_graph(),className = 'graph')
+    [
+        html.H2('Topografia do Brasil',className = 'graph-title'),
+        dcc.Graph(figure = build_graph(),className = 'graph')
+    ]
 )

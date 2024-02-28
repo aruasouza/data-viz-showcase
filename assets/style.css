@@ -6,6 +6,8 @@
   left: 0px;
   background-color: #0E1116;
   color: white;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .body_div {
@@ -18,8 +20,9 @@
     width: 100%;
     border-bottom:1px solid rgb(80,80,100);
     display: flex;
+    flex-wrap: wrap;
     padding: 25px;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .nav {
@@ -65,15 +68,15 @@
     text-decoration: None;
     margin: 40px;
     margin-bottom: 0px;
+    width: 150px;
 }
 
 .graph {
-    position: fixed;
-    top: 17%;
-    left: 0;
-    height: 83vh;
-    width: 100vw;
+    height: 450px;
+    width: 90%;
     z-index: -1;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .arua_img {
@@ -93,14 +96,16 @@
 }
 
 .div_dropdown {
-    width: 20%;
-    margin: 20px;
+    width: 17%;
+    margin: 2%;
+    min-width: 170px;
+    margin-top: 0;
 }
 
 .selection_bar {
     display: flex;
     justify-content: center;
-    margin-top: 65px;
+    flex-wrap: wrap;
 }
 
 .linkedin {
@@ -118,6 +123,13 @@
     padding: 5px;
 }
 
-.middle_div {
-    width: 60%;
+.graph-title {
+    margin: 40px;
+    margin-left: 5%;
+}
+
+.nav-div {
+    display: flex;
+    min-width: 20%;
+    justify-content: center;
 }

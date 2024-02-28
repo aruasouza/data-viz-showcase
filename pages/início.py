@@ -21,6 +21,10 @@ layout = html.Div([
             dcc.Link([
             html.Img(src = 'assets/iris.png',className = 'graph_img'),
             html.P('Iris Regressão')
-            ],className = 'graph_button',href = 'iris')
+            ],className = 'graph_button',href = 'iris'),
+            dcc.Link([
+            html.Img(src = 'assets/montecarlo.png',className = 'graph_img'),
+            html.P('Simulação de Montecarlo')
+            ],className = 'graph_button',href = 'montecarlo')
         ],className = 'bloco_graficos')
     ],className = 'body_div')
